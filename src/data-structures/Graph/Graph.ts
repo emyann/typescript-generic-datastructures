@@ -68,9 +68,6 @@ export class Graph<TVertex, TEdge> {
     return this;
   }
 
-  /**
-   * @param {GraphEdge} edge
-   */
   deleteEdge(edge: GraphEdge<TVertex, TEdge>) {
     // Delete edge from the list of edges.
     if (this.edges[edge.getKey()]) {
@@ -150,9 +147,6 @@ export class Graph<TVertex, TEdge> {
     return adjacencyMatrix;
   }
 
-  /**
-   * @return {string}
-   */
   toString() {
     return Object.keys(this.vertices).toString();
   }

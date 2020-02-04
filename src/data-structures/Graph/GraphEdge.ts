@@ -10,9 +10,6 @@ export class GraphEdge<TVertex, TEdge> {
     return `${startVertexKey}_${endVertexKey}`;
   }
 
-  /**
-   * @return {GraphEdge}
-   */
   reverse() {
     const tmp = this.startVertex;
     this.startVertex = this.endVertex;
@@ -21,9 +18,6 @@ export class GraphEdge<TVertex, TEdge> {
     return this;
   }
 
-  /**
-   * @return {string}
-   */
   toString() {
     return this.getKey();
   }
