@@ -4,6 +4,9 @@
   "description": "",
   "main": "./dist/typescript-generic-datastructures.js",
   "types": "./dist/types/index.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "tsnd --respawn ./src/examples/index.ts",
     "build": "run-p build:js build:types",
@@ -12,6 +15,15 @@
     "semantic-release": "semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "data structures",
+    "datastructures",
+    "data-structure",
+    "typescript",
+    "javascript",
+    "linked list",
+    "graph"
+  ],
   "release": {
     "branches": [
       "master",
@@ -22,7 +34,6 @@
       }
     ]
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
