@@ -35,7 +35,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dist-{{ .Environment.CIRCLE_SHA1" }}
+            - v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Publish Package
           command: cd dist && yarn run semantic-release
