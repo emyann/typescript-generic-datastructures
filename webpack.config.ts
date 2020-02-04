@@ -8,12 +8,12 @@ const webpackconfiguration: webpack.Configuration = {
   entry: path.resolve(__dirname, 'src', 'index.ts'),
   devtool: isProd ? 'hidden-source-map' : 'source-map',
   output: {
-    filename: 'typescript-datastructures.js',
+    filename: 'typescript-generic-datastructures.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
     globalObject: 'this',
-    sourceMapFilename: 'typescript-datastructures.map',
-    library: 'typescript-datastructures'
+    sourceMapFilename: 'typescript-generic-datastructures.map',
+    library: 'typescript-generic-datastructures'
   },
   resolve: {
     extensions: ['.ts', '.js', '.json']
