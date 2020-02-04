@@ -37,12 +37,14 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dependencies-
-            - v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          keys:
+            - v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Publish Package
           command: cd dist && yarn run semantic-release
