@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/typescript-generic-datastructures.js",
-  "types": "./dist/types/index.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
