@@ -35,6 +35,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
             - v1-dist-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Publish Package
