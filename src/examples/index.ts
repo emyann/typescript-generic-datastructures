@@ -1,5 +1,4 @@
 import { Graph, LinkedList, GraphEdge, GraphVertex, VertexKeyExtractor } from '../index';
-
 interface User {
   age: number;
 }
