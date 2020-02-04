@@ -44,10 +44,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - test
+      - build
       - publish:
           requires:
-            - test
+            - build
           filters:
             branches:
               only:
