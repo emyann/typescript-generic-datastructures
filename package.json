@@ -2,6 +2,7 @@
   "name": "typescript-generic-datastructures",
   "version": "1.0.0",
   "description": "",
+  "repository": "emyann/typescript-generic-datastructures",
   "main": "./dist/typescript-generic-datastructures.js",
   "types": "./dist/types/index.d.ts",
   "files": [

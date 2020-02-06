@@ -1,13 +1,23 @@
 import { GraphVertex } from './GraphVertex';
+export type EdgeKeyExtractor<T> = (edge: T) => string | number;
 
 export class GraphEdge<TVertex, TEdge> {
-  constructor(public startVertex: GraphVertex<TVertex, TEdge>, public endVertex: GraphVertex<TVertex, TEdge>, public value: TEdge) {}
+  constructor(
+    public startVertex: GraphVertex<TVertex, TEdge>,
+    public endVertex: GraphVertex<TVertex, TEdge>,
+    public value: TEdge,
+    private keyExtractor?: EdgeKeyExtractor<GraphEdge<TVertex, TEdge>>
+  ) {}
 
   getKey() {
-    const startVertexKey = this.startVertex.getKey();
-    const endVertexKey = this.endVertex.getKey();
+    if (!this.keyExtractor) {
+      const startVertexKey = this.startVertex.getKey();
+      const endVertexKey = this.endVertex.getKey();
 
-    return `${startVertexKey}_${endVertexKey}`;
+      return `${startVertexKey}_${endVertexKey}`;
+    } else {
+      return this.keyExtractor(this);
+    }
   }
 
   reverse() {
